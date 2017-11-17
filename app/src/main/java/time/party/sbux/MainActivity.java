@@ -1,9 +1,11 @@
 package time.party.sbux;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,26 +25,28 @@ public class MainActivity extends AppCompatActivity {
         inputText=(EditText) findViewById(R.id.inputText);
         textView=(TextView) findViewById(R.id.textView2);
         btnShoot= (Button) findViewById(R.id.btnShoot);
- // String penis = " "+inputText.getText().toString();
+
 //         textView.setText( penis );
 
 
         btnShoot.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // String penis = " "+inputText.getText().toString();
-               // textView.setText( penis );
+              String name1=textView.getText().toString();
+                Log.d("added1","name in view"+ name1);
+
+
+                //sending to controller
+
+                Intent myIntent = new Intent(MainActivity.this, controlla.class);
+                myIntent.putExtra("name1", name1);
+               MainActivity.this.startActivity( myIntent );
+
+
+//                startActivity(new Intent(MainActivity.this, SecondActivity.class));
             }
         } );
-//        inputText.setOnClickListener( new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String penis = " "+inputText.getText().toString();
-//                textView.setText( penis );
 //
-//            }
-//        } );
-
       inputText.addTextChangedListener( new TextWatcher() {
 
           @Override
