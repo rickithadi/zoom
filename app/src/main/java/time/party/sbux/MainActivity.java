@@ -42,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
                 myIntent.putExtra("name1", name1);
                MainActivity.this.startActivity( myIntent );
 
+                Intent myIntent2 = new Intent(MainActivity.this, TestActivity.class);
+                myIntent2.putExtra("name1", name1);
+                MainActivity.this.startActivity( myIntent2 );
+
 
 //                startActivity(new Intent(MainActivity.this, SecondActivity.class));
             }
