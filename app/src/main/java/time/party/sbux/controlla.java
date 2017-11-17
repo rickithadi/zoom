@@ -20,7 +20,7 @@ public class controlla extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate( savedInstanceState );
-
+        setContentView( R.layout.controlla );
         //receive from main
         Intent intent = getIntent();
         String name1 = intent.getStringExtra("name1");
@@ -28,13 +28,13 @@ public class controlla extends Activity {
 
 String hold="penis";
 //send to second
-        Intent go = new Intent(controlla.this, SecondActivity.class);
-        go.putExtra("Name1", hold);
-      startActivity( go );
-
-
-        //go to second
-        startActivity(new Intent(controlla.this, SecondActivity.class));
+//        Intent go = new Intent(controlla.this, SecondActivity.class);
+//        go.putExtra("Name1", hold);
+//      startActivity( go );
+//
+//
+//        //go to second
+//        startActivity(new Intent(controlla.this, SecondActivity.class));
     }
 
 
