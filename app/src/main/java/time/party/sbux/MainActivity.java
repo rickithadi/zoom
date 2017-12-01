@@ -26,30 +26,9 @@ public class MainActivity extends AppCompatActivity {
         textView=(TextView) findViewById(R.id.textView2);
         btnShoot= (Button) findViewById(R.id.btnShoot);
 
-//         textView.setText( penis );
 
 
-        btnShoot.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-              String name1=textView.getText().toString();
-                Log.d("added1","name in view"+ name1);
 
-
-                //sending to controller
-
-                Intent myIntent = new Intent(MainActivity.this, controlla.class);
-                myIntent.putExtra("name1", name1);
-               MainActivity.this.startActivity( myIntent );
-
-                Intent myIntent2 = new Intent(MainActivity.this, TestActivity.class);
-                myIntent2.putExtra("name1", name1);
-                MainActivity.this.startActivity( myIntent2 );
-
-
-//                startActivity(new Intent(MainActivity.this, SecondActivity.class));
-            }
-        } );
 //
       inputText.addTextChangedListener( new TextWatcher() {
 
@@ -66,11 +45,33 @@ public class MainActivity extends AppCompatActivity {
 
           @Override
           public void afterTextChanged(Editable editable) {
-             // textView.setText( penis );
+
+            inputText.getText().clear();
           }
       } );
 
+        btnShoot.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name1=textView.getText().toString();
+                Log.d("added1","name in view"+ name1);
 
+                inputText.getText().clear();
+
+                //sending to controller
+//
+//                Intent myIntent = new Intent(MainActivity.this, controlla.class);
+//                myIntent.putExtra("name1", name1);
+//               MainActivity.this.startActivity( myIntent );
+//
+//                Intent myIntent2 = new Intent(MainActivity.this, TestActivity.class);
+//                myIntent2.putExtra("name1", name1);
+//                MainActivity.this.startActivity( myIntent2 );
+
+
+//                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+            }
+        } );
     }
 
 

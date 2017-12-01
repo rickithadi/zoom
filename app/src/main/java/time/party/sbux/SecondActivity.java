@@ -14,13 +14,13 @@ TextView textView;
         setContentView( R.layout.activity_second );
         textView=(TextView) findViewById(R.id.textView);
 
+//
+//        //reseive from second
+//        Intent intent2 = getIntent();
+//        String name1 = intent2.getStringExtra("Name1");
+//        Log.d( name1, "name1 in second: " +name1);
 
-        //reseive from second
-        Intent intent2 = getIntent();
-        String name1 = intent2.getStringExtra("Name1");
-        Log.d( name1, "name1 in second: " +name1);
-
-
-        textView.setText( name1 );
+//
+//        textView.setText( name1 );
     }
 }
